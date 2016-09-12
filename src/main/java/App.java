@@ -17,16 +17,17 @@ public class App {
 
     get("/story", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("color", request.queryParams("color"));
-      model.put("superlative", request.queryParams("superlative"));
+      model.put("noun1", request.queryParams("noun1"));
+      model.put("place", request.queryParams("place"));
+      model.put("noun2", request.queryParams("noun2"));
+      model.put("noun3", request.queryParams("noun3"));
+      model.put("noun4", request.queryParams("noun4"));
+      model.put("adjective1", request.queryParams("adjective1"));
+      model.put("number", request.queryParams("number"));
       model.put("bodyPart", request.queryParams("bodyPart"));
-      model.put("bodyPart2", request.queryParams("bodyPart2"));
-      model.put("noun", request.queryParams("noun"));
-      model.put("animals", request.queryParams("animals"));
-      model.put("adjective", request.queryParams("adjective"));
       model.put("adjective2", request.queryParams("adjective2"));
-      model.put("adjective3", request.queryParams("adjective3"));
-      model.put("adjective4", request.queryParams("adjective4"));
+      model.put("verb1", request.queryParams("verb1"));
+      model.put("verb2", request.queryParams("verb2"));
       model.put("template", "templates/story.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
